@@ -141,7 +141,7 @@ end
 # => calling a method from within itself.
 
 #  Let's say you wanted to know what the double of a number was, then the double
-# => of that number, etc.  Let's say you wanted to double the number until the 
+# => of that number, etc.  Let's say you wanted to double the number until the
 # => pre-doubled number is 10 or greater.
 def doubler(start)
   puts start * 2
@@ -159,3 +159,4 @@ end
 
 #  After you type in doubler(2) it will automatically process until your number
 # => is above 10.  Much more efficient.
+#  Modify the code below so "Hello!" is printed 5 times.
