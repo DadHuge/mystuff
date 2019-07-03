@@ -19,7 +19,7 @@ immediate_family = family.select do |k,v|
   k == :sisters || k = :brothers
 end
 
-a = immediate_family.values.flatter
+a = immediate_family.values.flatten
 
 p arr
 
