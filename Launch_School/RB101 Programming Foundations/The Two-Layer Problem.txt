@@ -1,0 +1,48 @@
+The Two-Layer Problem
+Launch School
+Launch School in Launch School
+May 8, 2018 · 4 min read
+
+You have just finished reading your first programming book and somebody has asked you to solve the following problem:
+
+    Write a program that finds all the words in the english language (anagrams) that can be formed by using the letters in a given string.
+
+There are a number of ways that you can approach this problem. Depending on how quickly you need the program to finish, you may prefer one approach over another. For the sake of simplicity, and since you’re only a beginner, let’s assume that you don’t have any time or space constraints; you can go with a naive approach.
+
+This doesn’t sound too bad; you feel confident that you can solve this problem. You start thinking about the problem and begin to form a high-level strategy in your mind. You fire up your editor and start typing away. The “algorithm” that you have in mind involves sorting. You realize that you don’t know how to sort a string. Okay, not a big deal; let’s google that. After some searching, you find an answer to your query. Great! You go back to the editor and write some code that sorts the given string in alphabetical order. What’s next? You don’t remember. Frustration! You attempt to retrace your logic and after a while you recall why you needed to sort the string. But at the same time, you also realize that the fuzzy mix of ideas floating around in your head that you call an “algorithm” is incomplete, or worse incorrect; you have to make some changes to it. The result: more frustration.
+
+The reason for describing (with a bit of hyperbole) this hypothetical scenario is to illustrate a challenge that beginners to programming frequently encounter: learning to solve problems while simultaneously memorizing the syntax of a particular language. We call this the Two-Layer Problem. This can be a frustrating experience for beginners, but it doesn’t have to be. There is a way to avoid, or at least, reduce this frustration.
+How to Approach Problem Solving
+
+If you’re a programming beginner and find some elementary coding problems too difficult, it’s very likely caused by trying to code too soon. In the early stages of your learning, when you don’t have a muscle memory of the correct syntax, your focus tends to be divided between trying to sort out the logic of the problem itself and recalling the syntax of the programming language you’re learning. Human beings aren’t very good at multi-tasking like this. We like to focus on one problem at a time. So, what we need to do is to somehow divide this problem into two distinct problems and address each one individually.
+
+Our discussion so far suggests that we can divide up our problem into the following two sub-problems:
+
+1. Identifying the logical steps of finding all anagrams of a string in a dictionary
+2. Representing that logic with a programming language
+
+Formulating the logic is the more challenging and important layer of the problem. This step requires you try to reduce the problem to its essence — its most abstract form. Rather than reach for books on logic and philosophy here, we want to stay in the practical, programming realm and come up with a step-by-step algorithm that we can readily convert to a working program. One such process we teach at Launch School is called the PEDAC process.
+PEDAC
+
+PEDAC stands for: Understand the Problem, Write Examples/Test Cases, Data Structure, Algorithm, and Code. PEDAC is a step-by-step problem-solving process that we recommend and teach at Launch School.
+
+Notice that only one of the five steps is about coding or syntax. Most of the focus here is on solving the logic layer of the problem. This step-by-step process helps you untangle the two layers of the problem and allows you to focus on one layer at time. Once you figure out the PEDA (without the C) part of the problem, figuring out language-specific syntax becomes an isolated problem and that makes it very easy to solve. It becomes almost as easy as coloring a picture someone else has drawn for you.
+
+We won’t expand on the PEDAC process any further here because we have already written a detailed article on it: Solving Coding Problems with PEDAC. Give it a read and try to make PEDAC an integral part of your programming toolkit.
+Final Thoughts
+
+Beginner programmers often find problem solving difficult because they must struggle with two concerns at the same time. Finding a process that lets you separate the logic concern from the syntax concern greatly helps in reducing the difficulty. It also helps develop a problem-solving process that’s independent of any particular language.
+
+PEDAC
+Objective 	Step 	Description
+Process the Problem 	Understand the Problem
+
+    Identify expected input and output
+    Make the requirements explicit
+    Identify rules
+    Mental model of the problem (optional)
+
+	Examples/Test Case 	Validate understanding of the problem
+	Data Structure 	How we represent data that we will work with when converting the input to output.
+	Algorithm 	Steps for converting input to output
+Code with Intent 	Code 	Implementation of Algorithm
