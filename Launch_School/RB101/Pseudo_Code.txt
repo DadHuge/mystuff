@@ -1,0 +1,80 @@
+For example, here's an example of some pseudo-code for a method that determines which number is greatest in a collection.
+
+Given a collection of integers.
+
+Iterate through the collection one by one.
+  - save the first value as the starting value.
+  - for each iteration, compare the saved value with the current value.
+  - if the saved value is greater, or it's the same
+    - move to the next value in the collection
+  - otherwise, if the current value is greater
+    - reassign the saved value as the current value
+
+After iterating through the collection, return the saved value.
+
+keyword 	meaning
+START 	start of the program
+SET 	sets a variable we can use for later
+GET 	retrieve input from user
+PRINT 	displays output to user
+READ 	retrieve value from variable
+IF / ELSE IF / ELSE 	show conditional branches in logic
+WHILE 	show looping logic
+END 	end of the program
+
+
+Therefore, there are two layers to solving any problem:
+
+    The logical problem domain layer.
+    The syntactical programming language layer.
+
+    We can use the above keywords to act as a pseudo programming language, but one that's still written in English, allowing us to be a little more relaxed about the precision of the syntax. Here's a stab at translating to formal pseudo-code:
+
+    START
+
+    # Given a collection of integers called "numbers"
+
+    SET iterator = 1
+    SET saved_number = value within numbers collection at space 1
+
+    WHILE iterator <= length of numbers
+      SET current_number = value within numbers collection at space "iterator"
+      IF saved_number >= current_number
+        go to the next iteration
+      ELSE
+        saved_number = current_number
+
+      iterator = iterator + 1
+
+    PRINT saved_number
+
+    END
+
+    Translating Pseudo-Code to Program Code
+
+We're using Ruby, so here's a stab at it in Ruby. Note that we eschew explicit iteration over the more idiomatic implicit iteration using each. That's a language-specific choice. If we were to write this program in JavaScript, Python or PHP, we may choose to explicitly iterate, like in our pseudo-code.
+
+def find_greatest(numbers)
+  saved_number = nil
+
+  numbers.each do |num|
+    saved_number ||= num  # assign to first value
+    if saved_number >= num
+      next
+    else
+      saved_number = num
+    end
+  end
+
+  saved_number
+end
+
+We'll show you how to use flowcharts to help with this in the next assignment. For now, do a few practice rounds on using pseudo-code to guide your problem solving logic.
+
+For example, write out pseudo-code (both casual and formal) that does the following:
+
+    a method that returns the sum of two integers
+    a method that takes an array of strings, and returns a string that is all those strings concatenated together
+    a method that takes an array of integers, and returns a new array with every other element
+
+No need to code here, just practice writing logic out in English.
