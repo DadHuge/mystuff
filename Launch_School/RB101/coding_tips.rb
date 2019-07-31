@@ -25,4 +25,41 @@
       d.  When working with a method, you should be able to mentally extract the method from the larger program, and just work with the method in isolation.  Working this way helps compartmentalize your focus, an important skill when working on large codebases.
               WHEN YOU READ GOOD CODE, THE METHODS ARE ALL AT THE SAME LAYER OF ABSTRACTION.
 
-      e.
+              METHODS ARE LIKE LEGO BLOCKS.  EACH SHOULD BE STAND-ALONE PIECES OF FUNCTIONALITY.
+
+
+              Sometimes, you'll have methods that only display things. For example:
+
+              def welcome
+                puts "welcome"
+              end
+
+              This is fine, but it's not obvious whether a method called welcome returns a string, or outputs strings directly. One way to resolve this is to help yourself remember and prefix all methods that output values with something like print_, say_ or display_. This will require some discipline and it's important that you only output values in these methods. Don't mutate parameters or return values.
+
+        f.  Know when to use a "do/while" vs a "while" loop. Here's an example:
+
+         while answer.downcase != 'n' do
+           puts "Continue? (y/n)"
+           answer = gets.chomp
+         end
+
+         When running this, Ruby will throw an exception of "undefined local variable or method 'answer'". To correct this, we have to initialize answer before the while statement, like this:
+
+         answer = ''
+         while answer.downcase != 'n' do
+           puts "Continue? (y/n)"
+           answer = gets.chomp
+         end
+
+         That certainly would work, but a slightly better implementation could be to use a "do/while" loop:
+
+         loop do
+           puts "Continue? (y/n)"
+           answer = gets.chomp
+           break if answer.downcase == 'n'
+         end
+
+         Here, the entire code is contained in the loop, and it's slightly easier to reason with. You could even do without the answer variable and use the user's input (i.e. gets.chomp) in the if condition directly, but using answer is fine -- remember, clarity over terseness.
+
+         g.  Everything is truthy except nil and false.
+=end
